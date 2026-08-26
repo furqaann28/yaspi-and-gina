@@ -1,0 +1,1425 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For yaspi — With Love</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f3ef;
+    color: #493b37;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==============================
+   OPENING
+================================ */
+
+#opening {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at top left, #f4d9d9, transparent 40%),
+        radial-gradient(circle at bottom right, #d8c3b8, transparent 40%),
+        #f5eee9;
+
+    transition: 1.5s ease;
+}
+
+.opening-content {
+    text-align: center;
+    padding: 30px;
+}
+
+.small-title {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #96766c;
+    margin-bottom: 25px;
+}
+
+.envelope {
+    font-size: 75px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.opening-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    font-weight: 500;
+    color: #5d4741;
+}
+
+.opening-content p {
+    margin-top: 10px;
+    color: #8a7168;
+    font-size: 14px;
+}
+
+.open-btn {
+    margin-top: 35px;
+
+    padding: 15px 35px;
+
+    border: 1px solid #9d7c72;
+    background: transparent;
+
+    color: #70554d;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+.open-btn:hover {
+    background: #70554d;
+    color: white;
+}
+
+@keyframes float {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+/* ==============================
+   MUSIC
+================================ */
+
+.music-button {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid #b49b91;
+
+    background: rgba(255,255,255,.8);
+
+    color: #735b53;
+
+    cursor: pointer;
+
+    z-index: 500;
+
+}
+
+/* ==============================
+   GENERAL SECTION
+================================ */
+
+section {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 25px;
+
+}
+
+.container {
+
+    width: 100%;
+    max-width: 1000px;
+
+    text-align: center;
+
+}
+
+/* ==============================
+   HERO
+================================ */
+
+.hero {
+
+    background:
+        linear-gradient(
+            rgba(248,243,239,.78),
+            rgba(248,243,239,.94)
+        ),
+        url("");
+
+    position: relative;
+
+}
+
+.hero-content {
+
+    animation: appear 2s ease;
+
+}
+
+.eyebrow {
+
+    text-transform: uppercase;
+
+    letter-spacing: 7px;
+
+    font-size: 11px;
+
+    color: #a08379;
+
+    margin-bottom: 25px;
+
+}
+
+.hero h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(65px, 10vw, 120px);
+
+    font-weight: 500;
+
+    color: #59443d;
+
+    line-height: .9;
+
+}
+
+.hero h2 {
+
+    margin-top: 25px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 35px;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #96746a;
+
+}
+
+.date {
+
+    margin-top: 35px;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+    color: #806960;
+
+}
+
+.line {
+
+    width: 80px;
+
+    height: 1px;
+
+    background: #b59a90;
+
+    margin: 35px auto;
+
+}
+
+.hero-message {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    font-size: 14px;
+
+    color: #77655e;
+
+}
+
+/* ==============================
+   PHOTO SECTION
+================================ */
+
+.photos {
+
+    background: #eee5df;
+
+}
+
+.section-title {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    font-weight: 500;
+
+    color: #59443d;
+
+}
+
+.section-subtitle {
+
+    margin-top: 10px;
+
+    color: #8a736b;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+.photo-upload {
+
+    margin: 40px auto;
+
+    padding: 25px;
+
+    max-width: 500px;
+
+    border: 1px dashed #b69b91;
+
+    background: rgba(255,255,255,.45);
+
+}
+
+.photo-upload input {
+
+    margin-top: 15px;
+
+}
+
+.photo-gallery {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 20px;
+
+    margin-top: 40px;
+
+}
+
+.photo-card {
+
+    background: #fff;
+
+    padding: 8px 8px 35px;
+
+    box-shadow: 0 10px 25px rgba(70,50,40,.12);
+
+    transition: .5s;
+
+}
+
+.photo-card:nth-child(2),
+.photo-card:nth-child(5) {
+
+    transform: translateY(25px);
+
+}
+
+.photo-card:hover {
+
+    transform: translateY(-8px) rotate(0deg);
+
+}
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+}
+
+.photo-number {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    margin-top: 8px;
+
+    color: #94776e;
+
+}
+
+/* ==============================
+   MEMORIES
+================================ */
+
+.memories {
+
+    background: #f8f3ef;
+
+}
+
+.memory-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+
+    margin-top: 55px;
+
+}
+
+.memory {
+
+    padding: 40px 25px;
+
+    background: rgba(255,255,255,.6);
+
+    border: 1px solid #dfd0c9;
+
+}
+
+.memory-number {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 45px;
+
+    color: #b6978b;
+
+}
+
+.memory h3 {
+
+    margin: 15px 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+}
+
+.memory p {
+
+    line-height: 1.9;
+
+    font-size: 13px;
+
+    color: #79665e;
+
+}
+
+/* ==============================
+   LETTER
+================================ */
+
+.letter-section {
+
+    background: #eee5df;
+
+}
+
+.letter {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 60px;
+
+    background: #fffaf7;
+
+    box-shadow: 0 20px 50px rgba(70,50,40,.12);
+
+    position: relative;
+
+}
+
+.letter::before {
+
+    content: "♥";
+
+    position: absolute;
+
+    top: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #b89589;
+
+}
+
+.letter h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 45px;
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+
+}
+
+#typing {
+
+    text-align: left;
+
+    line-height: 2;
+
+    font-size: 14px;
+
+    color: #705d56;
+
+    min-height: 400px;
+
+}
+
+/* ==============================
+   FINAL
+================================ */
+
+.final {
+
+    min-height: 90vh;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #8d6b62,
+            #493b37
+        );
+
+    color: white;
+
+}
+
+.final .eyebrow {
+
+    color: #d9c5bd;
+
+}
+
+.final h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(60px,9vw,100px);
+
+    font-weight: 500;
+
+}
+
+.final h2 {
+
+    margin-top: 20px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #e4d2ca;
+
+}
+
+.final p {
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    line-height: 2;
+
+    color: #e0d0ca;
+
+    font-size: 14px;
+
+}
+
+.final-heart {
+
+    font-size: 45px;
+
+    animation: heartbeat 1.5s infinite;
+
+}
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+/* ==============================
+   HEARTS
+================================ */
+
+.heart {
+
+    position: fixed;
+
+    top: -30px;
+
+    z-index: 50;
+
+    pointer-events: none;
+
+    animation: fall linear forwards;
+
+}
+
+@keyframes fall {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ==============================
+   ANIMATION
+================================ */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media(max-width:700px) {
+
+    .opening-content h1 {
+        font-size: 42px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .photo-card img {
+        height: 200px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 35px 25px;
+    }
+
+    .section-title {
+        font-size: 45px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     OPENING
+=========================================== -->
+
+<div id="opening">
+
+    <div class="opening-content">
+
+        <div class="small-title">
+            A little something for
+        </div>
+
+        <div class="envelope">
+            💌
+        </div>
+
+        <h1>My Honey</h1>
+
+        <p>
+            Ada sesuatu yang ingin aku sampaikan kepadamu...
+        </p>
+
+        <button
+            class="open-btn"
+            onclick="openWebsite()">
+
+            Open My Heart
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     MUSIC
+=========================================== -->
+
+<audio id="music" loop>
+
+    <!--
+    GANTI "musik.mp3" DENGAN FILE LAGU KAMU
+    -->
+
+    <source src="musik.mp3" type="audio/mpeg">
+
+</audio>
+
+<button
+    class="music-button"
+    onclick="toggleMusic()">
+
+    ♪
+
+</button>
+
+
+<!-- ==========================================
+     MAIN
+=========================================== -->
+
+<main id="main">
+
+
+<!-- ==========================================
+     HERO
+=========================================== -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="eyebrow">
+            A special day for someone special
+        </div>
+
+        <h1>
+            yaspi
+        </h1>
+
+        <h2>
+            Happy Birthday, Honey
+        </h2>
+
+        <div class="line"></div>
+
+        <div class="date">
+            18 · 11 · 2026
+        </div>
+
+        <p class="hero-message">
+
+            Today is about celebrating you,
+            the person who has been part of
+            my story for the past two years.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     7 PHOTOS
+=========================================== -->
+
+<section class="photos">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Our Little Gallery
+        </div>
+
+        <h2 class="section-title">
+            Seven Moments
+        </h2>
+
+        <p class="section-subtitle">
+            Seven photos, countless memories.
+        </p>
+
+
+        <div class="photo-upload">
+
+            <p>
+                Pilih 7 foto kenangan kita ❤️
+            </p>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                multiple>
+
+        </div>
+
+
+        <div
+            id="photoGallery"
+            class="photo-gallery">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     THREE MEMORIES
+=========================================== -->
+
+<section class="memories">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Our Story
+        </div>
+
+        <h2 class="section-title">
+            Three Memories
+        </h2>
+
+        <div class="memory-grid">
+
+
+            <div class="memory">
+
+                <div class="memory-number">
+                    01
+                </div>
+
+                <h3>
+                    The Beginning
+                </h3>
+
+                <p>
+
+                    Ada satu titik ketika aku mulai
+                    menyadari bahwa kamu bukan lagi
+                    sekadar seseorang yang hadir.
+
+                    Entah sejak kapan,
+                    kehadiranmu mulai menjadi sesuatu
+                    yang aku tunggu.
+
+                </p>
+
+            </div>
+
+
+            <div class="memory">
+
+                <div class="memory-number">
+                    02
+                </div>
+
+                <h3>
+                    Little Things
+                </h3>
+
+                <p>
+
+                    Mungkin bagi orang lain,
+                    banyak hal yang kita lakukan
+                    terlihat sederhana.
+
+                    Tapi justru dari percakapan,
+                    tawa, perhatian kecil,
+                    dan waktu yang kita habiskan
+                    bersama, tercipta kenangan
+                    yang paling aku hargai.
+
+                </p>
+
+            </div>
+
+
+            <div class="memory">
+
+                <div class="memory-number">
+                    03
+                </div>
+
+                <h3>
+                    Two Years
+                </h3>
+
+                <p>
+
+                    Dua tahun bukan waktu yang sebentar.
+
+                    Kita sudah melewati banyak cerita,
+                    belajar memahami satu sama lain,
+                    tertawa, mungkin juga pernah kecewa.
+
+                    Tapi aku bersyukur,
+                    sampai hari ini cerita kita
+                    masih terus berjalan.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     LOVE LETTER
+=========================================== -->
+
+<section class="letter-section">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            A Letter For You
+        </div>
+
+        <div class="letter">
+
+            <h2>
+                Dear Honey,
+            </h2>
+
+            <div id="typing"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     FINAL
+=========================================== -->
+
+<section class="final">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            18 November 2026
+        </div>
+
+        <h1>
+            Happy Birthday,
+            yaspi
+        </h1>
+
+        <h2>
+            My Honey.
+        </h2>
+
+        <p>
+
+            Terima kasih sudah menjadi bagian
+            dari dua tahun perjalanan ini.
+
+            Aku tidak tahu apa yang akan terjadi
+            di masa depan, tapi aku berharap
+            masih akan ada banyak halaman
+            yang bisa kita tulis bersama.
+
+        </p>
+
+        <div class="final-heart">
+            ♥
+        </div>
+
+        <p>
+
+            Semoga di umurmu yang baru,
+            kamu selalu menemukan alasan
+            untuk tersenyum.
+
+            Dan kalau suatu hari kamu lupa
+            betapa berharganya dirimu,
+            semoga halaman kecil ini
+            mengingatkanmu bahwa...
+
+        </p>
+
+        <h2>
+            You are deeply loved.
+        </h2>
+
+        <p>
+            — orang spesialmu ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<script>
+
+/* ==========================================
+   OPEN WEBSITE
+=========================================== */
+
+function openWebsite() {
+
+    const opening =
+        document.getElementById("opening");
+
+    const main =
+        document.getElementById("main");
+
+    const music =
+        document.getElementById("music");
+
+
+    opening.style.opacity = "0";
+
+
+    setTimeout(() => {
+
+        opening.style.display = "none";
+
+        main.style.display = "block";
+
+    }, 1200);
+
+
+    /*
+       Browser biasanya tidak mengizinkan
+       autoplay sebelum user melakukan klik.
+
+       Karena tombol ini sudah diklik,
+       musik dapat dicoba dimainkan.
+    */
+
+    music.play().catch(() => {});
+
+    startTyping();
+
+    setInterval(createHeart, 600);
+
+}
+
+
+/* ==========================================
+   PHOTO UPLOAD
+=========================================== */
+
+const imageInput =
+    document.getElementById("imageInput");
+
+const photoGallery =
+    document.getElementById("photoGallery");
+
+
+imageInput.addEventListener(
+    "change",
+    function() {
+
+        photoGallery.innerHTML = "";
+
+        let files =
+            Array.from(this.files);
+
+        /*
+           Maksimal 7 foto
+        */
+
+        if (files.length > 7) {
+
+            alert(
+                "Untuk website ini, pilih maksimal 7 foto ❤️"
+            );
+
+            files = files.slice(0,7);
+
+        }
+
+
+        files.forEach(
+            (file,index) => {
+
+                const reader =
+                    new FileReader();
+
+
+                reader.onload =
+                    function(e) {
+
+                        const card =
+                            document.createElement("div");
+
+                        card.className =
+                            "photo-card";
+
+
+                        card.innerHTML = `
+
+                            <img
+                                src="${e.target.result}"
+                                alt="Memory ${index+1}">
+
+                            <div class="photo-number">
+                                Memory ${String(index+1).padStart(2,"0")}
+                            </div>
+
+                        `;
+
+
+                        photoGallery
+                            .appendChild(card);
+
+                    };
+
+
+                reader.readAsDataURL(file);
+
+            }
+        );
+
+    }
+);
+
+
+/* ==========================================
+   TYPING LETTER
+=========================================== */
+
+const letterText = `
+
+Honey,
+
+Selamat ulang tahun. ❤️
+
+Hari ini adalah hari yang spesial,
+karena hari ini adalah hari ketika
+seseorang yang sangat berarti dalam
+hidupku dilahirkan.
+
+18 November 2026.
+
+Hari ini kamu resmi bertambah usia,
+dan aku berharap bertambahnya usia
+juga membawa lebih banyak kebahagiaan,
+ketenangan, dan hal-hal baik dalam hidupmu.
+
+Kalau aku melihat kembali dua tahun
+yang sudah kita lewati, rasanya ada
+begitu banyak hal yang ingin aku
+ucapkan.
+
+Terima kasih.
+
+Terima kasih sudah hadir.
+
+Terima kasih untuk setiap percakapan,
+setiap tawa, setiap perhatian kecil,
+dan setiap momen yang mungkin terlihat
+sederhana tetapi ternyata sangat berarti
+buat aku.
+
+Aku mungkin bukan orang yang sempurna.
+
+Aku mungkin masih sering melakukan
+kesalahan, masih punya banyak
+kekurangan, dan masih harus belajar
+menjadi seseorang yang lebih baik.
+
+Tapi satu hal yang ingin aku pastikan...
+
+Aku akan selalu menghargai keberadaanmu.
+
+Dua tahun bersama mengajarkan aku
+bahwa hubungan bukan hanya tentang
+momen bahagia.
+
+Tapi juga tentang bagaimana dua orang
+belajar untuk saling memahami,
+saling menguatkan, dan tetap memilih
+untuk berjalan bersama.
+
+Honey,
+
+Aku berharap di umurmu yang baru
+ini kamu bisa semakin dekat dengan
+semua hal yang kamu impikan.
+
+Semoga langkahmu selalu dimudahkan.
+
+Semoga segala sesuatu yang sedang
+kamu perjuangkan mendapatkan hasil
+yang terbaik.
+
+Semoga kamu selalu dikelilingi
+orang-orang yang benar-benar
+menyayangimu.
+
+Dan semoga...
+
+aku masih bisa menjadi salah satu
+orang yang menemani perjalananmu.
+
+Aku tidak tahu akan seperti apa
+cerita kita beberapa tahun dari sekarang.
+
+Tapi kalau aku boleh berharap,
+
+aku ingin masih melihat senyummu.
+
+Masih mendengar ceritamu.
+
+Masih menjadi tempatmu pulang.
+
+Dan masih membuat kenangan baru
+bersamamu.
+
+Selamat ulang tahun, yaspi.
+
+Happy birthday, Honey.
+
+Terima kasih sudah menjadi bagian
+dari dua tahun yang sangat berarti
+dalam hidupku.
+
+I love you. ❤️
+
+— orang spesialmu
+
+`;
+
+
+let typingStarted = false;
+
+
+function startTyping() {
+
+    if (typingStarted)
+        return;
+
+    typingStarted = true;
+
+
+    const element =
+        document.getElementById("typing");
+
+    let index = 0;
+
+
+    function type() {
+
+        if (index < letterText.length) {
+
+            let char =
+                letterText.charAt(index);
+
+
+            if (char === "\n") {
+
+                element.innerHTML += "<br>";
+
+            } else {
+
+                element.innerHTML += char;
+
+            }
+
+
+            index++;
+
+            setTimeout(type, 25);
+
+        }
+
+    }
+
+
+    type();
+
+}
+
+
+/* ==========================================
+   HEARTS
+=========================================== */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className = "heart";
+
+
+    const symbols = [
+        "♥",
+        "♡",
+        "✦"
+    ];
+
+
+    heart.innerHTML =
+        symbols[
+            Math.floor(
+                Math.random() *
+                symbols.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+
+    heart.style.fontSize =
+        (12 + Math.random()*20) + "px";
+
+
+    heart.style.color =
+        "#a98277";
+
+
+    heart.style.animationDuration =
+        (5 + Math.random()*5) + "s";
+
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(
+        () => heart.remove(),
+        10000
+    );
+
+}
+
+
+/* ==========================================
+   MUSIC
+=========================================== */
+
+let musicPlaying = false;
+
+
+function toggleMusic() {
+
+    const music =
+        document.getElementById("music");
+
+
+    if (musicPlaying) {
+
+        music.pause();
+
+        musicPlaying = false;
+
+    } else {
+
+        music.play();
+
+        musicPlaying = true;
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+```
